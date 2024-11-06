@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: url('list_access_n_modif1.png') center center/cover no-repeat fixed;
+        }
+
+        /* Navigation Buttons */
+        .untitled-design-11-1, 
+        .untitled-design-12-1 {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .untitled-design-11-1 {
+            left: 20px;
+        }
+
+        .untitled-design-12-1 {
+            right: 20px;
+        }
+
+        /* Side Navigation Styles */
+        .rectangle-2 {
+            background: #f7e9de;
+            border-radius: 50px 0 0 50px;
+            border-style: solid;
+            border-color: #cabadb;
+            border-width: 5px;
+            width: 576px;
+            height: 100vh;
+            position: fixed;
+            right: -576px;
+            top: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+            transition: transform 0.5s ease-out;
+            z-index: 1000;
+        }
+
+        .polygon-2 {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scaleX(-1);
+            right: 500px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: flex-start;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .text-item {
+            color: #4f364b;
+            font-family: "Agdasima", sans-serif;
+            font-size: 30px;
+            font-weight: 400;
+            transition: color 0.3s;
+            cursor: pointer;
+            line-height: 1.2;
+        }
+
+        .text-item:hover {
+            color: green;
+        }
+
+        /* Content Styles */
+        .list-access-and-modification {
+            text-align: center;
+            font-family: "Agdasima", sans-serif;
+            font-size: 48px;
+            color: #4f364b;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Link Box */
+        .for-additional-information-visit-this-link {
+            background: #f7e9de;
+            border-radius: 50px;
+            border: 5px solid #cabadb;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            width: 30%;
+            min-height: 70px;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .for-additional-information-visit-this-link-span2 {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <title>List Access and Modification</title>
+</head>
+<body>
+    <div class="list-access-n-modif">
+        <img class="untitled-design-11-1" src="back1.png" onclick="showDataTypes()" alt="Back" />
+        <img class="untitled-design-12-1" src="home1.png" onclick="window.location.href='1HomeListsArrays.html'" alt="Home" />
+        
+        <div class="for-additional-information-visit-this-link">
+            <span>For additional information, visit this </span>
+            <span class="for-additional-information-visit-this-link-span2"
+                onclick="window.location.href='https://builtin.com/data-science/python-list'">
+                link
+            </span>
+        </div>
+    </div>
+
+    <div class="rectangle-2" id="rectangleRight">
+        <img class="polygon-2" src="triangle.png" id="polygonRight" onclick="closeDataTypes()" alt="Toggle Menu" />
+        <div class="text-container">
+            <div class="text-item" onclick="redirect('ListBasicsindex.html')">
+                List Basics
+            </div>
+            <div class="text-item" onclick="redirect('ListAccessNModifindex.html')">
+                List Access and Modification
+            </div>
+            <div class="text-item" onclick="redirect('ListMethodsindex.html')">
+                List Methods
+            </div>
+            <div class="text-item" onclick="redirect('LoopingThruListindex.html')">
+                Looping Through Lists
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(-100%)';
+        }
+
+        function closeDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(100%)';
+        }
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./topic-page.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fira+Code:wght@300..700&family=Numans&family=Oxanium:wght@200..800&family=Oxygen+Mono&family=Palanquin:wght@100;200;300;400;500;600;700&family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Understanding Debugging in Python</title>
+</head>
+
+<body>
+    <div class="var-datatypehome">
+        <img class="untitled-design-16-1" src="backbtn.png" onclick="window.location.href='001ChooseTopic.html'" />
+        
+        <div class="main-content">
+            <div class="frame-3">
+                <div class="understanding">Understanding</div>
+            </div>
+            <div class="button" onclick="showVariables()">
+                <div class="topic-text">Debugging</div>
+            </div>
+            <div class="in-python">in Python</div>
+        </div>
+    </div>
+
+    <div class="variables-tab">
+        <div class="rectangle-1" id="rectangleLeft">
+            <img class="polygon-1" src="triangle.png" id="polygonLeft" onclick="closeVariables()" />
+            <div class="text-container">
+                <div class="text-item" onclick="redirect('WhatIsExceptionindex.html')">
+                    What is an Exception?
+                </div>
+                <div class="text-item" onclick="redirect('ExceptionHandlingBasicsindex.html')">
+                    Exception Handling Basics
+                </div>
+                <div class="text-item" onclick="redirect('CommonExceptionindex.html')">
+                    Common Exceptions
+                </div>
+                <div class="text-item" onclick="redirect('AdvancedExceptionHandlingindex.html')">
+                    Advanced Exception Handling
+                </div>
+                <div class="text-item" onclick="redirect('Assertionsindex.html')">
+                    Assertions
+                </div>
+                <div class="text-item" onclick="redirect('CustomExceptionsindex.html')">
+                    Custom Exceptions
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(0)';
+        }
+
+        function closeVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(-100%)';
+        }
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>

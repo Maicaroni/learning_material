@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: url('namingrule1.png') center center/cover no-repeat fixed;
+        }
+
+        .naming-rules {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Navigation Buttons */
+        .untitled-design-11-1, 
+        .untitled-design-12-1 {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .untitled-design-11-1 {
+            left: 20px;
+        }
+
+        .untitled-design-12-1 {
+            right: 20px;
+        }
+
+        /* Side Navigation Styles */
+        .rectangle-1 {
+            background: #f7e9de;
+            border-radius: 0px 50px 50px 0px;
+            border-style: solid;
+            border-color: #cabadb;
+            border-width: 5px;
+            width: 576px;
+            height: 100%;
+            position: fixed;
+            left: -576px;
+            top: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            transition: transform 0.5s ease-out;
+            z-index: 1000;
+        }
+
+        .polygon-1 {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 500px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .text-item {
+            color: #4f364b;
+            font-family: "Agdasima", sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .text-item:hover {
+            color: green;
+        }
+
+        /* Link Box */
+        .to-know-more-about-the-other-python-keywords-visit-this-link {
+            background: #f7e9de;
+            border-radius: 50px;
+            border: 5px solid #cabadb;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            width: 30%;
+            min-height: 70px;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .to-know-more-about-the-other-python-keywords-visit-this-link-span2 {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <title>Naming Rules</title>
+</head>
+<body>
+    <div class="naming-rules">
+        <img class="untitled-design-11-1" src="back1.png" onclick="showVariables()" alt="Back" />
+        <img class="untitled-design-12-1" src="home1.png" onclick="window.location.href='1HomeVariableDataType.html'" alt="Home" />
+        
+        <div class="to-know-more-about-the-other-python-keywords-visit-this-link">
+            <span>To know more about the other Python keywords, visit this</span>
+            <span class="to-know-more-about-the-other-python-keywords-visit-this-link-span2"
+                onclick="window.location.href='https://www.programiz.com/python-programming/keyword-list'">
+                link
+            </span>
+        </div>
+    </div>
+
+    <div class="variables-tab">
+        <div class="rectangle-1" id="rectangleLeft">
+            <img class="polygon-1" src="triangle.png" id="polygonLeft" onclick="closeVariables()" alt="Toggle Menu" />
+            <div class="text-container">
+                <div class="text-item" onclick="redirect('CreatingnNaming.html')">
+                    Creating and Naming Variables
+                </div>
+                <div class="text-item" onclick="redirect('NamingRulesindex.html')">
+                    Naming Rules
+                </div>
+                <div class="text-item" onclick="redirect('NamingConventionsindex.html')">
+                    Variable Naming Conventions
+                </div>
+                <div class="text-item" onclick="redirect('AssigningValuesindex.html')">
+                    Assigning Values
+                </div>
+                <div class="text-item" onclick="redirect('PrintingVarindex.html')">
+                    Printing Variables
+                </div>
+                <div class="text-item" onclick="redirect('GlobalVsLocalindex.html')">
+                    Global vs. Local Variables
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(100%)';
+        }
+
+        function closeVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(-100%)';
+        }
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

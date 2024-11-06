@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fira+Code:wght@300..700&family=Numans&family=Oxanium:wght@200..800&family=Oxygen+Mono&family=Palanquin:wght@100;200;300;400;500;600;700&family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset CSS */
+        a,
+        button,
+        input,
+        select,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            text-decoration: none;
+            background: none;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Page-specific CSS */
+        .starting-page,
+        .starting-page * {
+            box-sizing: border-box;
+        }
+
+        .starting-page {
+            background: url('startingPage.png') center center/cover no-repeat,
+                        radial-gradient(closest-side,
+                            rgba(247, 233, 222, 0.8) 0%,
+                            rgba(202, 186, 219, 0.8) 100%);
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 1rem 6rem;
+        }
+
+        .welcome {
+            color: #db3e1c;
+            text-align: center;
+            font-family: "MyanmarKhyay-Regular", sans-serif;
+            font-size: clamp(4rem, 10vw, 200px);
+            font-weight: 400;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .frame-3 {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 849px;
+            position: relative;
+            margin: auto 0;
+        }
+
+        .to-our-virtual-supplementary-learning-material {
+            color: #00291c;
+            text-align: center;
+            font-family: "Reem Kufi Fun", sans-serif;
+            font-size: clamp(2rem, 5vw, 80px);
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .polygon-11 {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-90deg);
+            overflow: visible;
+            cursor: pointer;
+        }
+
+        .polygon-11:hover {
+            box-shadow: 0 0 40px rgba(189, 33, 6, 0.7);
+            /* Blue glow */
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="starting-page">
+        <div class="frame-3">
+        </div>
+        <img class="polygon-11" src="triangle.png" alt="Polygon Image"
+            onclick="window.location.href='001ChooseTopic.html'" />
+    </div>
+</body>
+
+</html>

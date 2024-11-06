@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: url('getting_setting1.png') center center/cover no-repeat fixed;
+        }
+
+        .getting-n-setting-dt {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Navigation Buttons */
+        .untitled-design-11-1, 
+        .untitled-design-12-1 {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .untitled-design-11-1 {
+            left: 20px;
+        }
+
+        .untitled-design-12-1 {
+            right: 20px;
+        }
+
+        /* Side Navigation Styles */
+        .rectangle-2 {
+            background: #f7e9de;
+            border-radius: 50px 0 0 50px;
+            border-style: solid;
+            border-color: #cabadb;
+            border-width: 5px;
+            width: 576px;
+            height: 100%;
+            position: fixed;
+            right: -576px;
+            top: 0;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            transition: transform 0.5s ease-out;
+            z-index: 1000;
+        }
+
+        .polygon-2 {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) scaleX(-1);
+            right: 500px;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .text-item {
+            color: #4f364b;
+            font-family: "Agdasima", sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .text-item:hover {
+            color: green;
+        }
+
+        /* Content Styles */
+        .getting-and-setting-data-types {
+            text-align: center;
+            font-family: "Agdasima", sans-serif;
+            font-size: 48px;
+            color: #4f364b;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Video Link Box */
+        .for-more-information-we-recommend-you-to-watch-this-video {
+            background: #f7e9de;
+            border-radius: 50px;
+            border: 5px solid #cabadb;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            position: fixed;
+            width: 30%;
+            min-height: 70px;
+            right: 20px;
+            bottom: 20px;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .for-more-information-we-recommend-you-to-watch-this-video-span2 {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <title>Getting and Setting Data Types</title>
+</head>
+<body>
+    <div class="getting-n-setting-dt">
+        <img class="untitled-design-11-1" src="back1.png" onclick="showDataTypes()" alt="Back" />
+        <img class="untitled-design-12-1" src="home1.png" onclick="window.location.href='1HomeVariableDataType.html'" alt="Home" />
+               
+        <div class="for-more-information-we-recommend-you-to-watch-this-video">
+            <span>For more information, we recommend you to watch this</span>
+            <span class="for-more-information-we-recommend-you-to-watch-this-video-span2"
+                onclick="window.location.href='https://youtu.be/B63bN2cLVLM?si=JgBOIqfWqd44gSBx'">
+                video
+            </span>
+        </div>
+    </div>
+
+    <div class="rectangle-2" id="rectangleRight">
+        <img class="polygon-2" src="triangle.png" id="polygonRight" onclick="closeDataTypes()" alt="Toggle Menu" />
+        <div class="text-container">
+            <div class="text-item" onclick="redirect('DataTypesindex.html')">
+                Data Types
+            </div>
+            <div class="text-item" onclick="redirect('GettingNSettingDtindex.html')">
+                Getting and Setting Data Types
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(-100%)';
+        }
+
+        function closeDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(100%)';
+        }
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Fira+Code:wght@300..700&family=Numans&family=Oxanium:wght@200..800&family=Oxygen+Mono&family=Palanquin:wght@100;200;300;400;500;600;700&family=Pixelify+Sans:wght@400..700&family=Play:wght@400;700&family=Reem+Kufi+Fun:wght@400..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./topic-home.css">
+    
+    <title>Understanding Functions and Procedures in Python</title>
+</head>
+
+<body>
+    <div class="var-datatypehome">
+        <img class="untitled-design-16-1" src="backbtn.png" onclick="window.location.href='001ChooseTopic.html'" />
+        
+        <div class="main-content">
+            <div class="frame-3">
+                <div class="understanding">Understanding</div>
+            </div>
+            <div class="button" onclick="showVariables()">
+                <div class="functions">Functions</div>
+            </div>
+            <div class="understanding">and</div>
+            <div class="button" onclick="showDataTypes()">
+                <div class="procedures">Procedures</div>
+            </div>
+            <div class="in-python">in Python</div>
+        </div>
+    </div>
+
+    <div class="variables-tab">
+        <div class="rectangle-1" id="rectangleLeft">
+            <img class="polygon-1" src="triangle.png" id="polygonLeft" onclick="closeVariables()" />
+            <div class="text-container">
+                <div class="text-item" onclick="redirect('DefiningCallingindex.html')">
+                    Defining and Calling Functions
+                </div>
+                <div class="text-item" onclick="redirect('ParamVsArguindex.html')">
+                    Parameters vs. Arguments
+                </div>
+                <div class="text-item" onclick="redirect('TypeOfArguindex.html')">
+                    Types of Arguments
+                </div>
+                <div class="text-item" onclick="redirect('DefaultParamindex.html')">
+                    Default Parameters
+                </div>
+                <div class="text-item" onclick="redirect('ReturnValuesindex.html')">
+                    Return Values
+                </div>
+                <div class="text-item" onclick="redirect('PositionNKeywordindex.html')">
+                    Positional-Only and
+                    Keyword-Only Arguments
+                </div>
+                <div class="text-item" onclick="redirect('Recursionindex.html')">
+                    Recursion
+                </div>
+            </div>
+        </div>
+
+        <div class="rectangle-2" id="rectangleRight">
+            <img style="transform: scaleX(-1);" class="polygon-2" src="triangle.png" id="polygonRight"
+                onclick="closeDataTypes()" />
+            <div class="text-container">
+                <div class="text-item-right" onclick="redirect('Procedureindex.html')">
+                    Procedures
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(0)';
+        }
+
+        function showDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(0)';
+        }
+
+        function closeVariables() {
+            document.getElementById('rectangleLeft').style.transform = 'translateX(-100%)';
+        }
+
+        function closeDataTypes() {
+            document.getElementById('rectangleRight').style.transform = 'translateX(100%)';
+        }
+
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
